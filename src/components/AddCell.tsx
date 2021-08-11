@@ -3,13 +3,14 @@ import './AddCell.css';
 
 interface AddCellProps {
   nextCellId: string | null;
+  forceVisible?: boolean;
 }
 
-const AddCell: React.FC<AddCellProps> = ({ nextCellId }) => {
+const AddCell: React.FC<AddCellProps> = ({ nextCellId, forceVisible }) => {
   const { insertCellBefore } = useActions();
 
   return (
-    <div className='add-cell'>
+    <div className={`add-cell ${forceVisible && 'force-visible'}`}>
       <div className='add-buttons'>
         {/* 
           Todo: Extract duplicates
