@@ -8,4 +8,4 @@ Code It is a custom markdown and code editor that allows you to run JavaScript i
 
 ### Author
 
-Keaton Sentak - [Portfolio](https://keatonsentak.com)
+Keaton Sentak - [Portfolio](https://keatonsentak.com)[GitHub](https://github.com/ksentak)
