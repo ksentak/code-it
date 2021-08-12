@@ -13,28 +13,8 @@ const AddCell: React.FC<AddCellProps> = ({ nextCellId, forceVisible }) => {
   return (
     <div className={`add-cell ${forceVisible && 'force-visible'}`}>
       <div className='add-buttons'>
-        <AddCellButton action={() => insertCellBefore(nextCellId, 'code')} btnText='Code'/>
-        <AddCellButton action={() => insertCellBefore(nextCellId, 'text')} btnText= 'Text'/>
-
-    
-        {/* <button
-          className='button is-rounded is-primary is-small'
-          onClick={() => insertCellBefore(nextCellId, 'code')}
-        >
-          <span className='icon is-small'>
-            <i className='fas fa-plus'></i>
-          </span>
-          <span>Code</span>
-        </button>
-        <button
-          className='button is-rounded is-primary is-small'
-          onClick={() => insertCellBefore(nextCellId, 'text')}
-        >
-          <span className='icon is-small'>
-            <i className='fas fa-plus'></i>
-          </span>
-          <span>Text</span>
-        </button> */}
+        <AddCellButton action={() => insertCellBefore(nextCellId, 'code')} btnText='Code' />
+        <AddCellButton action={() => insertCellBefore(nextCellId, 'text')} btnText='Text' />
       </div>
       <div className='divider'></div>
     </div>
