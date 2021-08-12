@@ -1,3 +1,4 @@
+import AddCellButton from './AddCellButton';
 import { useActions } from '../hooks/useActions';
 import './AddCell.css';
 
@@ -12,12 +13,11 @@ const AddCell: React.FC<AddCellProps> = ({ nextCellId, forceVisible }) => {
   return (
     <div className={`add-cell ${forceVisible && 'force-visible'}`}>
       <div className='add-buttons'>
-        {/* 
-          Todo: Extract duplicates
+        <AddCellButton action={() => insertCellBefore(nextCellId, 'code')} btnText='Code'/>
+        <AddCellButton action={() => insertCellBefore(nextCellId, 'text')} btnText= 'Text'/>
 
-          - Keaton, 2021/08/09
-         */}
-        <button
+    
+        {/* <button
           className='button is-rounded is-primary is-small'
           onClick={() => insertCellBefore(nextCellId, 'code')}
         >
@@ -34,7 +34,7 @@ const AddCell: React.FC<AddCellProps> = ({ nextCellId, forceVisible }) => {
             <i className='fas fa-plus'></i>
           </span>
           <span>Text</span>
-        </button>
+        </button> */}
       </div>
       <div className='divider'></div>
     </div>
