@@ -1,7 +1,7 @@
-import { InsertCellBeforeAction } from '../state/actions';
+import { InsertCellAfterAction } from '../state/actions';
 
 interface AddCellButtonProps {
-  action: () => InsertCellBeforeAction;
+  action: () => InsertCellAfterAction;
   btnText: string;
 }
 
