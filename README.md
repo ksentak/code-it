@@ -4,11 +4,23 @@
 
 Code It is a custom code and markdown editor that allows a user to run JavaScript in the browser. This application is similar to Codepen. Users can import npm packages to be used in their code. Users can also create their own React components.
 
-## For Development
+## Getting Started
 
-1. Clone the repository.
-2. Install modules with the command `npm install`.
-3. Run the application in development mode with `npm start`.
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/ksentak/code-it.git
+
+# Go into the repository
+$ cd code-it
+
+# Install dependencies
+$ npm install
+
+# Run the application in development mode
+$ npm start
+```
 
 ## Technologies
 
