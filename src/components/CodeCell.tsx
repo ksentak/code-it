@@ -40,15 +40,17 @@ const CodeCell: React.FC<CodeCellProps> = ({ cell }) => {
             onChange={(value) => updateCell(cell.id, value)}
           />
         </Resizable>
-        {!bundle || bundle.isLoading ? (
-          <div className='progress-cover'>
-            <progress className='progress is-small is-primary' max='100'>
-              Loading
-            </progress>
-          </div>
-        ) : (
-          <Preview code={bundle.code} errorMessage={bundle.error} />
-        )}
+        <div className='progress-wrapper'>
+          {!bundle || bundle.isLoading ? (
+            <div className='progress-cover'>
+              <progress className='progress is-small is-primary' max='100'>
+                Loading
+              </progress>
+            </div>
+          ) : (
+            <Preview code={bundle.code} errorMessage={bundle.error} />
+          )}
+        </div>
       </div>
     </Resizable>
   );
