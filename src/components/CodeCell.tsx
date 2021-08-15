@@ -5,6 +5,7 @@ import Resizable from './Resizable';
 import { Cell } from '../state';
 import { useActions } from '../hooks/useActions';
 import { useTypedSelector } from '../hooks/useTypedSelector';
+import './CodeCell.css';
 
 interface CodeCellProps {
   cell: Cell;
@@ -39,7 +40,15 @@ const CodeCell: React.FC<CodeCellProps> = ({ cell }) => {
             onChange={(value) => updateCell(cell.id, value)}
           />
         </Resizable>
-        {bundle && <Preview code={bundle.code} errorMessage={bundle.error} />}
+        {!bundle || bundle.isLoading ? (
+          <div className='progress-cover'>
+            <progress className='progress is-small is-primary' max='100'>
+              Loading
+            </progress>
+          </div>
+        ) : (
+          <Preview code={bundle.code} errorMessage={bundle.error} />
+        )}
       </div>
     </Resizable>
   );
