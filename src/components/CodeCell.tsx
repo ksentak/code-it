@@ -18,12 +18,11 @@ const CodeCell: React.FC<CodeCellProps> = ({ cell }) => {
     const { data, order } = state.cells;
     const orderedCells = order.map((id) => data[id]);
 
-    const cumulativeCode = [
-      `
+    const showFunc = `
         import _React from 'react';
         import _ReactDOM from 'react-dom';
 
-        const show = (value) => {
+        var show = (value) => {
           const root = document.querySelector('#root');
 
           if (typeof value === 'object') {
@@ -36,12 +35,19 @@ const CodeCell: React.FC<CodeCellProps> = ({ cell }) => {
             root.innerHTML = value;
           }
         };
-      `
-    ];
+      `;
+
+    const showFuncNoOp = 'var show = () => {}';
+
+    const cumulativeCode = [];
 
     for (let c of orderedCells) {
       if (c.type === 'code') {
-        cumulativeCode.push(cell.content);
+        if (c.id === cell.id) {
+          cumulativeCode.push(showFunc);
+        } else {
+          cumulativeCode.push(showFuncNoOp);
+        }
       }
 
       if (c.id === cell.id) {
