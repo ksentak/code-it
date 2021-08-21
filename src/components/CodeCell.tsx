@@ -14,15 +14,15 @@ interface CodeCellProps {
 const CodeCell: React.FC<CodeCellProps> = ({ cell }) => {
   const { updateCell, createBundle } = useActions();
   const bundle = useTypedSelector((state) => state.bundles[cell.id]);
-  const cumulativeCell = useTypedSelector((state) => {
+  const cumulativeCode = useTypedSelector((state) => {
     const { data, order } = state.cells;
     const orderedCells = order.map((id) => data[id]);
 
-    const cumultiveCode = [];
+    const cumulativeCode = [];
 
     for (let c of orderedCells) {
       if (c.type === 'code') {
-        cumultiveCode.push(cell.content);
+        cumulativeCode.push(cell.content);
       }
 
       if (c.id === cell.id) {
@@ -30,7 +30,7 @@ const CodeCell: React.FC<CodeCellProps> = ({ cell }) => {
       }
     }
 
-    return cumultiveCode;
+    return cumulativeCode;
   });
 
   useEffect(() => {
@@ -40,7 +40,7 @@ const CodeCell: React.FC<CodeCellProps> = ({ cell }) => {
     }
 
     const timer = setTimeout(async () => {
-      createBundle(cell.id, cell.content);
+      createBundle(cell.id, cumulativeCode.join('\n'));
     }, 1000);
 
     return () => {
