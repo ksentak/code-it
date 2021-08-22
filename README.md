@@ -33,6 +33,7 @@ $ npm start
 ## Deployed Application
 
 ![App Screenshot](./public/img/code-it.png)
+[https://code-it-01.netlify.app/](https://code-it-01.netlify.app/)
 
 ## Built With
 
