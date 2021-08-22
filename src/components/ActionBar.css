@@ -3,7 +3,7 @@
   top: 0;
   right: 0;
   opacity: 0.4;
-  transition: opacity 0.4s;
+  transition: opacity 0.3s;
 }
 
 .action-bar:hover {
