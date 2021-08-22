@@ -1,12 +1,20 @@
 # Code It
 
-![Built with React](./public/img/built-with-react.svg) ![Built with TypeScript](./public/img/built-with-typescript.svg)
+![Built with React](./public/img/built-with-react.svg)
+![Built with TypeScript](./public/img/built-with-typescript.svg)
 
-Code It is a custom code and markdown editor that allows a user to run JavaScript in the browser. This application is similar to Codepen. Users can import npm packages to be used in their code. Users can also create their own React components.
+Code It is a custom code and markdown editor that allows a user to run
+JavaScript in the browser. Users can import npm packages to be used in their
+code. Users can also create their own React components. Use the show function
+`show()` to output your code into the preview component. Code cells are
+cumulative and variables that are set in upper cells can be used in cells lower
+on the page.
 
 ## Getting Started
 
-To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+To clone and run this application, you'll need [Git](https://git-scm.com) and
+[Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com))
+installed on your computer. From your command line:
 
 ```bash
 # Clone this repository
@@ -22,7 +30,11 @@ $ npm install
 $ npm start
 ```
 
-## Technologies
+## Deployed Application
+
+![App Screenshot](./public/img/code-it.png)
+
+## Built With
 
 - React
 - TypeScript
