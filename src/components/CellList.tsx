@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import CellListItem from './CellListItem';
 import AddCell from './AddCell';
 import { useTypedSelector } from '../hooks/useTypedSelector';
-import 'CellList.css';
+import './CellList.css';
 
 const CellList: React.FC = () => {
   const cells = useTypedSelector(({ cells: { order, data } }) => order.map((id) => data[id]));
