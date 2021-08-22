@@ -35,6 +35,7 @@ export const useCumulativeCode = (cellId: string) => {
         } else {
           cumulativeCode.push(showFuncNoOp);
         }
+        cumulativeCode.push(c.content);
       }
 
       if (c.id === cellId) {
